@@ -1,0 +1,101 @@
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: #192655;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+.logo {
+  width: 50%;
+  padding-left: 20px;
+}
+.logo-icon {
+  font-size: 20px;
+  animation-name: logo-spin;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.menu-option {
+  width: 50%;
+}
+.menu-bar {
+  display: none;
+}
+.menu-option-list,
+.menu-option-list-sm {
+  display: flex;
+  justify-content: space-around;
+}
+.menu-option-list li,
+.menu-option-list-sm li {
+  list-style: none;
+  cursor: pointer;
+}
+.menu-option-list li a,
+.menu-option-list-sm li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.menu-option-list li a::after,
+.menu-option-list-sm li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  left: 0%;
+  top: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.menu-option-list li a:hover::after,
+.menu-option-list-sm li a:hover::after {
+  width: 100%;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu-bar {
+    display: block;
+    position: relative;
+    left: 85%;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .menu-option-list {
+    display: none;
+  }
+  .menu-option-list-sm {
+    text-align: center;
+    display: block;
+    background-color: #3876bf;
+    position: absolute;
+    top: 60px;
+    left: 0%;
+    width: 100%;
+    z-index: 2;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .menu-option-list-sm li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .menu-option-list-sm li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+  }
+}
