@@ -1,0 +1,86 @@
+.hero-section {
+  display: flex;
+  margin: 10%;
+}
+.text-part {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.download-cv {
+  background-color: #3e54a7;
+  box-shadow: 2px 2px 7px slategrey;
+  width: 125px;
+  height: 10%;
+  border-radius: 15px;
+  text-align: center;
+  padding: 6px;
+  position: relative;
+  left: 30%;
+}
+.image-part {
+  width: 50%;
+}
+.image {
+  height: 300px;
+  width: 300px;
+  background-image: url("../images/profile.jpeg");
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+  bottom: 20%;
+  left: 40%;
+  animation-name: image-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes image-animation {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .image {
+    height: 200px;
+    width: 200px;
+    bottom: 0%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .image {
+    left: 50%;
+  }
+  .text-part {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .image {
+    left: 40%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .image {
+    left: 28%;
+  }
+}
