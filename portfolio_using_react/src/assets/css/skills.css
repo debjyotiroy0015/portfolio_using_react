@@ -1,0 +1,74 @@
+.skills {
+  background-color: rgb(39, 40, 129);
+  border-radius: 10px;
+  margin: 10%;
+  margin-top: 200px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.skills-text {
+  margin-top: 15px;
+  color: white;
+}
+.cards {
+  width: 100%;
+  padding: 50px;
+}
+.card {
+  width: 30%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(39, 39, 78);
+}
+.skill-logo {
+  font-size: 100px;
+}
+.skill-name {
+  text-align: center;
+}
+.exp-prof {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Proficiency-level,
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.progress-bar {
+  content: "";
+  width: 150px;
+  height: 7px;
+  background-color: rgb(26, 27, 84);
+  border-radius: 3px;
+}
+.proficincy-progress-bar,
+.exp-progression-bar {
+  content: "";
+  height: 6px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    flex-direction: row;
+  }
+  .skill-logo {
+    font-size: 60px;
+  }
+  .progress-bar {
+    width: 90px;
+  }
+}
