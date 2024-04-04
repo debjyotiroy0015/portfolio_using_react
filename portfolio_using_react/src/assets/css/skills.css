@@ -70,4 +70,8 @@
   .progress-bar {
     width: 90px;
   }
+  .proficincy-level-text,
+  .experience-text {
+    font-size: 10px;
+  }
 }
