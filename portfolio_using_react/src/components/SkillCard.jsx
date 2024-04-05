@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-const SkillCard = () => {
+const SkillCard = ({ item, key }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
@@ -10,14 +10,16 @@ const SkillCard = () => {
     }
   }, [isInView]);
   return (
-    <div className="card" ref={ref}>
+    <div className="card" ref={ref} key={key}>
       <div className="skill-image">
-        <i class="fa-brands fa-html5 skill-logo"></i>
-        <div className="skill-name">HTML 5</div>
+        <i className={`${item.logo} skill-logo`}></i>
+        <div className="skill-name">{item.name}</div>
       </div>
       <div className="exp-prof">
         <div className="Proficiency-level">
-          <div className="proficincy-level-text">Proficincy Lavel : 100%</div>
+          <div className="proficincy-level-text">
+            Proficincy Lavel : {item.proficiency}
+          </div>
           <div className="progress-bar">
             <motion.div
               variants={{
@@ -32,7 +34,7 @@ const SkillCard = () => {
           </div>
         </div>
         <div className="experience">
-          <div className="experience-text">Experience : 5yrs</div>
+          <div className="experience-text">Experience : {item.experience}</div>
           <div className="progress-bar">
             <motion.div
               variants={{

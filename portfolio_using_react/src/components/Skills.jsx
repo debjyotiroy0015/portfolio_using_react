@@ -1,14 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/css/skills.css";
-import { IoLogoHtml5 } from "react-icons/io5";
 import SkillCard from "./SkillCard";
-
 const Skills = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const skillDetails = [
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+    {
+      logo: "fa-brands fa-html5",
+      name: "HTML 5",
+      proficiency: "100%",
+      experience: "5 Years",
+    },
+  ];
   return (
     <div className="skills">
       <h1 className="skills-text">Skills</h1>
       <div className="cards">
-        <SkillCard />
+        {skillDetails.map((item, key) => (
+          <SkillCard item={item} key={key} />
+        ))}
       </div>
     </div>
   );

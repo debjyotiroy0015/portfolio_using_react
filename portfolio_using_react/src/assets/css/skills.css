@@ -2,7 +2,6 @@
   background-color: rgb(39, 40, 129);
   border-radius: 10px;
   margin: 10%;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +14,12 @@
 .cards {
   width: 100%;
   padding: 50px;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+}
+.cards::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
 .card {
   width: 30%;
@@ -37,6 +42,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: max-content;
 }
 .Proficiency-level,
 .experience {
@@ -60,18 +66,20 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .cards {
+    gap: 50px;
+  }
   .card {
     width: 100%;
     flex-direction: row;
+  }
+  .exp-prof {
+    width: 200px;
   }
   .skill-logo {
     font-size: 60px;
   }
   .progress-bar {
     width: 90px;
-  }
-  .proficincy-level-text,
-  .experience-text {
-    font-size: 10px;
   }
 }
