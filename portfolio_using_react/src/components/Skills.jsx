@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import "../assets/css/skills.css";
 import SkillCard from "./SkillCard";
 const Skills = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const skillDetails = [
-    {
-      logo: "fa-brands fa-html5",
-      name: "HTML 5",
-      proficiency: "100%",
-      experience: "5 Years",
-    },
     {
       logo: "fa-brands fa-html5",
       name: "HTML 5",
@@ -66,7 +59,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <h1 className="skills-text">Skills</h1>
       <div className="cards">
         {skillDetails.map((item, key) => (
